@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-import pandas
+#import pandas
 # --------------------------------
 # Databricks Configuration
 # --------------------------------

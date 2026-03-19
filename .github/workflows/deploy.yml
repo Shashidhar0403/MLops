@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'main.py'
+      - "ML/main.py"
 
 jobs:
   deploy:

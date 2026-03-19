@@ -106,8 +106,8 @@ else:
 
 
 
-# Run the Job
 
+# Run the Job
 
 run_url = f"{DATABRICKS_HOST}/api/2.1/jobs/run-now"
 
@@ -120,7 +120,22 @@ run_response = requests.post(
     headers=headers,
     data=json.dumps(run_payload)
 )
-print("Databricks Job Url:- ",run_url)
-print("Run response:", run_response.text)
+
+run_data = run_response.json()
+
+print("Run response:", run_data)
+
+run_id = run_data.get("run_id")
+
+if run_id:
+    databricks_url = f"{DATABRICKS_HOST}#job/{job_id}/run/{run_id}"
+    
+    print(f"Databricks Job Run URL: {databricks_url}")
+    
+    # 👇 This makes it clickable in GitHub Actions
+    print(f"::notice title=Databricks Job Run::{databricks_url}")
+
+else:
+    print("Run ID not found")
 
 print("Job triggered successfully.")

@@ -120,7 +120,7 @@ run_response = requests.post(
     headers=headers,
     data=json.dumps(run_payload)
 )
-Print("Databricks Job Url:- ",run_url)
+print("Databricks Job Url:- ",run_url)
 print("Run response:", run_response.text)
 
 print("Job triggered successfully.")

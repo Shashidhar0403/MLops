@@ -6,7 +6,7 @@ import os
 # Databricks Configuration
 # --------------------------------
 
-DATABRICKS_HOST = "https://dbc-7a28e21d-1f11.cloud.databricks.com"
+DATABRICKS_HOST =    os.getenv("DATABRICKS_HOST")              #"https://dbc-7a28e21d-1f11.cloud.databricks.com"
 
 TOKEN = os.getenv("DATABRICKS_TOKEN")
 

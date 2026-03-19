@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-#import pandass
+
 # --------------------------------
 # Databricks Configuration
 # --------------------------------
@@ -15,12 +15,12 @@ headers = {
     "Content-Type": "application/json"
 }
 
-# --------------------------------
+
 # Job Configuration
-# --------------------------------
+
 
 job_config = {
-    "name": "sales_pipeline_from_vscode",
+    "name": "Sinsa's_pipeline",
     "tasks": [
         {
             "task_key": "ingest_data",
@@ -45,9 +45,9 @@ job_config = {
     ]
 }
 
-# --------------------------------
+
 # Function: Get Existing Job ID
-# --------------------------------
+
 
 def get_existing_job_id(job_name):
 
@@ -68,9 +68,9 @@ def get_existing_job_id(job_name):
     return None
 
 
-# --------------------------------
+
 # Check if Job Exists
-# --------------------------------
+
 
 job_name = job_config["name"]
 
@@ -105,9 +105,9 @@ else:
     print(f"Job created successfully: {job_id}")
 
 
-# --------------------------------
+
 # Run the Job
-# --------------------------------
+
 
 run_url = f"{DATABRICKS_HOST}/api/2.1/jobs/run-now"
 

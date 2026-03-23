@@ -6,9 +6,9 @@ on:
       - main
     # paths:
     #   - "ML/main.py"
-  # pull_request:
-  #   branches:
-  #     - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:

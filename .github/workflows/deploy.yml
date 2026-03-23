@@ -35,7 +35,7 @@ jobs:
         run: pytest ML/tests/
 
       - name: Run Deployment Script
-        if: github.event== 'push'
+        if: github.event_name== 'push'
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}

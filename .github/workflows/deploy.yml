@@ -29,6 +29,9 @@ jobs:
         run: pip install -r ML/requirements.txt pytest
 
       - name: Run Tests
+        env:
+          DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
+          DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
         run: pytest ML/tests/
 
       - name: Run Deployment Script

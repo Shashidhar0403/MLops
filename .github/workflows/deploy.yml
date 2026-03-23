@@ -4,8 +4,11 @@ on:
   push:
     branches:
       - main
-    paths:
-      - "ML/main.py"
+    # paths:
+    #   - "ML/main.py"
+  # pull_request:
+  #   branches:
+  #     - main
 
 jobs:
   deploy:

@@ -32,4 +32,4 @@ jobs:
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_HOST: ${{ vars.DATABRICKS_HOST }}
-        run: python main.py
+        run: python ML/main.py

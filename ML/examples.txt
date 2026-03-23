@@ -1,1 +1,1 @@
-Hi welcome to the traning of Github CI/CD workflows execution
+Hi trying 2 for pull request deployement welcome to the traning of Github CI/CD workflows execution.

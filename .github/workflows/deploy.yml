@@ -29,7 +29,7 @@ jobs:
         run: pip install -r ML/requirements.txt pytest
 
       - name: Run Tests
-        run: pytest tests/
+        run: pytest ML/tests/
 
       - name: Run Deployment Script
         if: github.event== 'push'

@@ -139,4 +139,4 @@ else:
     print("Run ID not found")
 
 print("Job triggered successfully.")
-print("Running from develop branch")
+
